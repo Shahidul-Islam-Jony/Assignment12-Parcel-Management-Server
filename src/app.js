@@ -9,7 +9,8 @@ app.use(express.json())
 app.use(cors())
 
 // 
-const Users = require("./routes/users/index")
+const Users = require("./routes/users/index");
+const singleUser = require("./routes/singleUser/indexSingleUser")
 
 
 
@@ -19,6 +20,7 @@ app.get('/health', (req, res) => {
 
 // set user info into db
 app.use(Users)
+app.use(singleUser)
 
 
 
