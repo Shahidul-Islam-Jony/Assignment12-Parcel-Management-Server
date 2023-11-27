@@ -14,6 +14,7 @@ const singleUser = require("./routes/singleUser/indexSingleUser")
 const bookAParcel = require('./routes/BookAParcel/bookAParcel')
 const myParcel = require('./routes/MyParcelRoute/myParcelRoute')
 const modifyParcel = require('./routes/SingleParcelRoute/singleParcelRoute')
+const updateUser = require('./routes/UpdateUserProfile/updateUserProfileRoute')
 
 
 app.use(Users)
@@ -21,6 +22,7 @@ app.use(singleUser)
 app.use(bookAParcel)
 app.use(myParcel)
 app.use(modifyParcel)
+app.use(updateUser)
 
 
 app.get('/health', (req, res) => {
