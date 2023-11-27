@@ -12,19 +12,18 @@ app.use(cors())
 const Users = require("./routes/users/index");
 const singleUser = require("./routes/singleUser/indexSingleUser")
 const bookAParcel = require('./routes/BookAParcel/bookAParcel')
+const myParcel = require('./routes/MyParcelRoute/myParcelRoute')
 
+
+app.use(Users)
+app.use(singleUser)
+app.use(bookAParcel)
+app.use(myParcel)
 
 
 app.get('/health', (req, res) => {
     res.send('Parcel management server is running smoothly');
 })
-
-// set user info into db
-app.use(Users)
-app.use(singleUser)
-app.use(bookAParcel)
-
-
 
 app.all('*', (req, res, next) => {
     const error = new Error(`The requested URL is invalid : [${req.url}]`)

@@ -50,6 +50,10 @@ const parcelSchema = new Schema({
         type: Number,
         required: true
     },
+    status:{
+        type:String,
+        required:true
+    }
 
 })
 
