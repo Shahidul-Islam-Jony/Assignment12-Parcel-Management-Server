@@ -11,6 +11,7 @@ app.use(cors())
 // 
 const Users = require("./routes/users/index");
 const singleUser = require("./routes/singleUser/indexSingleUser")
+const bookAParcel = require('./routes/BookAParcel/bookAParcel')
 
 
 
@@ -21,6 +22,7 @@ app.get('/health', (req, res) => {
 // set user info into db
 app.use(Users)
 app.use(singleUser)
+app.use(bookAParcel)
 
 
 
