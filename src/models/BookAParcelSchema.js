@@ -30,8 +30,12 @@ const parcelSchema = new Schema({
         type: String,
         required: true
     },
-    date: {
+    requestDate: {
         type: Date,
+        required: true
+    },
+    bookingDate:{
+        type:Date,
         required: true
     },
     addressLatitude: {

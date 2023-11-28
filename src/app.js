@@ -15,6 +15,7 @@ const bookAParcel = require('./routes/BookAParcel/bookAParcel')
 const myParcel = require('./routes/MyParcelRoute/myParcelRoute')
 const modifyParcel = require('./routes/SingleParcelRoute/singleParcelRoute')
 const updateUser = require('./routes/UpdateUserProfile/updateUserProfileRoute')
+const allParcels = require ("./routes/AllParcelsRoute/AllParcelsRoute")
 
 
 app.use(Users)
@@ -23,6 +24,7 @@ app.use(bookAParcel)
 app.use(myParcel)
 app.use(modifyParcel)
 app.use(updateUser)
+app.use(allParcels)
 
 
 app.get('/health', (req, res) => {
