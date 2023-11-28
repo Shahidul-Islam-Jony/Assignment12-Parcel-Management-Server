@@ -10,6 +10,10 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    phoneNumber: {
+        type: Number,
+        required: true
+    },
     photoUrl: {
         type: String,
         required: true
@@ -21,6 +25,6 @@ const userSchema = new Schema({
 
 })
 
-const User = mongoose.model('User',userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User
