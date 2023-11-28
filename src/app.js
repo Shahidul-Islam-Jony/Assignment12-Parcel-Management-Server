@@ -17,6 +17,7 @@ const modifyParcel = require('./routes/SingleParcelRoute/singleParcelRoute')
 const updateUser = require('./routes/UpdateUserProfile/updateUserProfileRoute')
 const allParcels = require("./routes/AllParcelsRoute/AllParcelsRoute")
 const allUsers = require('./routes/AllUsersRoute/AllUsers')
+const updateBooking = require('./routes/UpdateBookingParcel/UpdateBookingParcelRoute')
 
 
 app.use(Users)
@@ -27,6 +28,7 @@ app.use(modifyParcel)
 app.use(updateUser)
 app.use(allParcels)
 app.use(allUsers)
+app.use(updateBooking)
 
 
 app.get('/health', (req, res) => {

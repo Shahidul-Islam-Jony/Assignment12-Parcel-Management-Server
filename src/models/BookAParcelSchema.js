@@ -34,8 +34,8 @@ const parcelSchema = new Schema({
         type: Date,
         required: true
     },
-    bookingDate:{
-        type:Date,
+    bookingDate: {
+        type: Date,
         required: true
     },
     addressLatitude: {
@@ -54,9 +54,9 @@ const parcelSchema = new Schema({
         type: Number,
         required: true
     },
-    status:{
-        type:String,
-        required:true
+    status: {
+        type: String,
+        required: true
     }
 
 })
@@ -64,3 +64,14 @@ const parcelSchema = new Schema({
 const Parcel = mongoose.model('Parcel', parcelSchema);
 
 module.exports = Parcel
+
+parcelSchema.add({
+    deliveryManId: {
+        type: String,
+        required: true
+    },
+    approximateDate: {
+        type: Date,
+        required: true
+    }
+})
