@@ -18,6 +18,7 @@ const updateUser = require('./routes/UpdateUserProfile/updateUserProfileRoute')
 const allParcels = require("./routes/AllParcelsRoute/AllParcelsRoute")
 const allUsers = require('./routes/AllUsersRoute/AllUsers')
 const updateBooking = require('./routes/UpdateBookingParcel/UpdateBookingParcelRoute')
+const modifyUserType = require('./routes/ModifyUserType/ModifyUserTypeRoute')
 
 
 app.use(Users)
@@ -29,6 +30,7 @@ app.use(updateUser)
 app.use(allParcels)
 app.use(allUsers)
 app.use(updateBooking)
+app.use(modifyUserType)
 
 
 app.get('/health', (req, res) => {
