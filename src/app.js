@@ -19,6 +19,7 @@ const allParcels = require("./routes/AllParcelsRoute/AllParcelsRoute")
 const allUsers = require('./routes/AllUsersRoute/AllUsers')
 const updateBooking = require('./routes/UpdateBookingParcel/UpdateBookingParcelRoute')
 const modifyUserType = require('./routes/ModifyUserType/ModifyUserTypeRoute')
+const myDeliveryParcels = require('./routes/MyDeliveryParcels/myDeliveryParcelsRoute')
 
 
 app.use(Users)
@@ -31,6 +32,7 @@ app.use(allParcels)
 app.use(allUsers)
 app.use(updateBooking)
 app.use(modifyUserType)
+app.use(myDeliveryParcels)
 
 
 app.get('/health', (req, res) => {
