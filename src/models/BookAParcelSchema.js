@@ -68,10 +68,8 @@ module.exports = Parcel
 parcelSchema.add({
     deliveryManId: {
         type: String,
-        required: true
     },
     approximateDate: {
         type: Date,
-        required: true
     }
 })

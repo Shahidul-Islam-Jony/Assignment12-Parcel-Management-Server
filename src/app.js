@@ -21,6 +21,7 @@ const updateBooking = require('./routes/UpdateBookingParcel/UpdateBookingParcelR
 const modifyUserType = require('./routes/ModifyUserType/ModifyUserTypeRoute')
 const myDeliveryParcels = require('./routes/MyDeliveryParcels/myDeliveryParcelsRoute')
 const userRatings = require('./routes/UserRatingRoute/UserRatingRoute')
+const myRating = require('./routes/MyRatings/MyRatingsRoute')
 
 
 app.use(Users)
@@ -35,6 +36,7 @@ app.use(updateBooking)
 app.use(modifyUserType)
 app.use(myDeliveryParcels)
 app.use(userRatings)
+app.use(myRating)
 
 
 app.get('/health', (req, res) => {
