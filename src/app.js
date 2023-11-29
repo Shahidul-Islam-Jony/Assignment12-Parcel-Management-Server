@@ -22,6 +22,7 @@ const modifyUserType = require('./routes/ModifyUserType/ModifyUserTypeRoute')
 const myDeliveryParcels = require('./routes/MyDeliveryParcels/myDeliveryParcelsRoute')
 const userRatings = require('./routes/UserRatingRoute/UserRatingRoute')
 const myRating = require('./routes/MyRatings/MyRatingsRoute')
+const count = require('./routes/Counts/Counts')
 
 
 app.use(Users)
@@ -37,6 +38,7 @@ app.use(modifyUserType)
 app.use(myDeliveryParcels)
 app.use(userRatings)
 app.use(myRating)
+app.use(count)
 
 
 app.get('/health', (req, res) => {
