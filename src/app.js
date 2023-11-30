@@ -23,6 +23,7 @@ const myDeliveryParcels = require('./routes/MyDeliveryParcels/myDeliveryParcelsR
 const userRatings = require('./routes/UserRatingRoute/UserRatingRoute')
 const myRating = require('./routes/MyRatings/MyRatingsRoute')
 const count = require('./routes/Counts/Counts')
+const deliveryAndRating = require('./routes/addDeliveryAndRatingRoute/addDeliveryAndRatingRoute')
 
 
 app.use(Users)
@@ -39,9 +40,10 @@ app.use(myDeliveryParcels)
 app.use(userRatings)
 app.use(myRating)
 app.use(count)
+app.use(deliveryAndRating)
 
 
-app.get('/health', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Parcel management server is running smoothly');
 })
 
@@ -58,12 +60,12 @@ app.use((err, req, res, next) => {
 })
 
 
-const main = async () => {
-    await conncectDB();
-    app.listen(port, () => {
-        console.log(`Parcel management server is running on port ${port}`);
-    })
-}
+// const main = async () => {
+//     await conncectDB();
+//     app.listen(port, () => {
+//         console.log(`Parcel management server is running on port ${port}`);
+//     })
+// }
 
-main();
+// main();
 
