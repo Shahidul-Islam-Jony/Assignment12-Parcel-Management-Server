@@ -28,3 +28,21 @@ const userSchema = new Schema({
 const User = mongoose.model('User', userSchema);
 
 module.exports = User
+
+userSchema.add({
+    totalDelivery: {
+        type: Number
+    },
+    ratingGivenUser: {
+        type: Number
+    },
+    ratings:{
+        type:Number
+    },
+    totalRating: {
+        type: Number,
+    },
+    averageRating: {
+        type: Number
+    }
+})
