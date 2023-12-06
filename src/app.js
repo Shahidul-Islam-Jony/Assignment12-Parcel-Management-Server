@@ -1,14 +1,23 @@
 const express = require("express");
 const conncectDB = require("./db/connectDB");
 const cors = require('cors')
+const mongoose = require('mongoose');
 require('dotenv').config();
 const app = express();
 const port = process.env.PPORT || 5000;
 
-app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: [
+        'https://assignment-12-aa1be.web.app',
+        'https://assignment-12-aa1be.firebaseapp.com',
+        'http://localhost:5173'
+    ],
+    credentials: true
+}));
 
-// 
+app.use(express.json())
+
+
 const Users = require("./routes/users/index");
 const singleUser = require("./routes/singleUser/indexSingleUser")
 const bookAParcel = require('./routes/BookAParcel/bookAParcel')
@@ -69,3 +78,4 @@ app.use((err, req, res, next) => {
 
 // main();
 
+module.exports = app

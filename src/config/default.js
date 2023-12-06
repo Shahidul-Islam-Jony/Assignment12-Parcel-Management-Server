@@ -1,8 +1,8 @@
 require('dotenv').config();
 
 const config={
-    LOCAL_CLIENT: process.env.LOCAL_CLIENT,
-    CLIENT : process.env.CLIENT
+    LOCAL_CLIENT: 'https://assignment-12-aa1be.web.app',
+    CLIENT : 'https://assignment-12-aa1be.firebaseapp.com',
 }
 
 module.exports = config
